@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hüseyin Cengiz | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="scroll-progress" id="scroll-progress"></div>
+    
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#" class="logo-link">Hüseyin Cengiz</a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#about" data-i18n="about">About</a></li>
+                    <li><a href="#education" data-i18n="education">Education</a></li>
+                    <li><a href="#skills" data-i18n="skills_title">Skills</a></li>
+                    <li><a href="#projects" data-i18n="projects">Projects</a></li>
+                    <li><a href="#experience" data-i18n="experience_title">Experience</a></li>
+                    <li><a href="#contact" data-i18n="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="settings">
+                <button id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="tr">TR</button>
+                </div>
+            </div>
+            <button class="hamburger" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-i18n="hero_title">Hi, I'm <span>Hüseyin Cengiz</span></h1>
+                    <p class="subtitle" data-i18n="hero_subtitle">Electrical & Computer Engineering Student</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/huseyincengiz321" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:huseyincengiz321@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/cengiz.py" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="9.png" alt="Hüseyin Cengiz">
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2 data-i18n="about_title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p data-i18n="about_text1">I am a passionate engineering student with a double major in Electrical & Electronics Engineering and Computer Engineering at Çukurova University.</p>
+                        <p data-i18n="about_text2">I have a strong interest in software development, embedded systems, and IoT technologies. My goal is to combine my knowledge from both fields to create innovative solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="container">
+                <h2 data-i18n="education_title">Education</h2>
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-i18n="edu_date3">2026 - Devam Ediyor</div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="edu_title3">Çukurova University</h3>
+                            <p data-i18n="edu_desc3">Electrical & Electronics Engineering - Yüksek Lisans - Güç Elektroniği</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-i18n="edu_date1">2020-2025</div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="edu_title1">Çukurova University</h3>
+                            <p data-i18n="edu_desc1">Electrical & Electronics Engineering - Bachelor's Degree</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-i18n="edu_date2">2022-2025</div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="edu_title2">Çukurova University</h3>
+                            <p data-i18n="edu_desc2">Computer Engineering - Double Major Program</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2 data-i18n="skills_title">Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">C/C++</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                    </div>
+                    <!-- <div class="skill-category">
+                        <h3><i class="fas fa-cogs"></i> Frameworks & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Raspberry Pi</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Linux</span>
+                        </div>
+                    </div> -->
+                    <div class="skill-category">
+                        <h3><i class="fas fa-language"></i> Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Turkish (Native)</span>
+                            <span class="skill-tag">English (Fluent)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2 data-i18n="projects_title">Projects</h2>
+                <div class="projects-grid">
+                    <!-- Projects will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <h2 data-i18n="experience_title">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-i18n="exp_date1">Summer 2023</div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="exp_title1">Software Development Intern</h3>
+                            <p data-i18n="exp_desc1">ABC Tech Company - Developed backend APIs and contributed to IoT projects</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-i18n="exp_date2">2022-2023</div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="exp_title2">Freelance Developer</h3>
+                            <p data-i18n="exp_desc2">Worked on various web development and automation projects for clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2 data-i18n="contact_title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p data-i18n="contact_text">Feel free to reach out for collaborations or just to say hi!</p>
+                        <div class="contact-links">
+                            <a href="mailto:huseyincengiz321@gmail.com"><i class="fas fa-envelope"></i> huseyincengiz321@gmail.com</a>
+                            <a href="https://www.linkedin.com/in/huseyincengiz321" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="https://www.instagram.com/cengiz.py" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                        <div class="download-cv">
+                            <a href="Huseyin_Cengiz_CV.pdf" class="cv-button" download>
+                                <i class="fas fa-download"></i>
+                                <span data-i18n="download_cv">Download CV</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-i18n="footer_text">© 2023 Hüseyin Cengiz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be filled by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
