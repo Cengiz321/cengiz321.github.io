@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 tr: 'React önyüz ve Node.js arka yüz ile geliştirildi. Gerçek zamanlı skorlama, kullanıcı girişi, yönetici paneli ve çoklu soru tipleri ile dinamik soru üretme özellikleri eklendi. Kullanıcı profilleri, liderlik tabloları ve quiz istatistikleri içerir. Docker kullanılarak dağıtıldı ve CI/CD pipeline\'ları ile yönetildi.'
             },
             tags: ['React', 'Node.js', 'MongoDB', 'JWT', 'REST API', 'Docker'],
-            liveLink: '#',
+            liveLink: 'https://cengiz321.github.io/isgHayrat/',
             sourceLink: '#'
         }
     ];
