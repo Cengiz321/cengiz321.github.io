@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 en: 'IoT-based home automation system with voice control',
                 tr: 'Ses kontrollü IoT tabanlı ev otomasyon sistemi'
             },
-            image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+            image: 'img/home.jpg',
             details: {
                 en: 'Developed a smart home system using Raspberry Pi and various sensors that can be controlled via mobile app and voice commands. Features include lighting control, temperature monitoring, and security alerts. The system uses MQTT protocol for communication and integrates with Google Assistant for voice control.',
                 tr: 'Raspberry Pi ve çeşitli sensörler kullanarak mobil uygulama ve ses komutlarıyla kontrol edilebilen bir akıllı ev sistemi geliştirdim. Aydınlatma kontrolü, sıcaklık izleme ve güvenlik uyarıları gibi özellikler içerir. Sistem iletişim için MQTT protokolünü kullanır ve ses kontrolü için Google Assistant ile entegre olur.'
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 en: 'Computer vision system using OpenCV and Python',
                 tr: 'OpenCV ve Python tabanlı görüntü işleme sistemi'
             },
-            image: 'https://images.unsplash.com/photo-1551373884-7c7a6f69e3d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+            image: 'img/plate.jpg',
             details: {
                 en: 'YOLO-based detection model achieving 92% accuracy under various lighting conditions. Implemented plate segmentation and OCR for character recognition with real-time processing capability. The system can process multiple video streams simultaneously and includes a web dashboard for monitoring.',
                 tr: 'Farklı aydınlatma koşullarında %92 doğruluk sağlayan YOLO tabanlı model geliştirildi. Gerçek zamanlı işleme yeteneği ile plaka segmentasyonu ve OCR uygulandı. Sistem aynı anda birden fazla video akışını işleyebilir ve izleme için bir web kontrol paneli içerir.'
@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 en: 'Full-stack web application for quizzes',
                 tr: 'Quizler için full-stack web uygulaması'
             },
-            image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+            image: 'img/quiz.jpg',
             details: {
                 en: 'Built with React frontend and Node.js backend featuring real-time scoring, user authentication, admin panel, and dynamic question generation with multiple question types. Includes user profiles, leaderboards, and quiz statistics. Deployed using Docker and managed with CI/CD pipelines.',
                 tr: 'React önyüz ve Node.js arka yüz ile geliştirildi. Gerçek zamanlı skorlama, kullanıcı girişi, yönetici paneli ve çoklu soru tipleri ile dinamik soru üretme özellikleri eklendi. Kullanıcı profilleri, liderlik tabloları ve quiz istatistikleri içerir. Docker kullanılarak dağıtıldı ve CI/CD pipeline\'ları ile yönetildi.'
@@ -314,53 +314,56 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Open Project Modal
+    // Open Project Modal
     function openProjectModal(project, lang) {
         const modal = document.getElementById('project-modal');
-        const modalContent = modal.querySelector('.modal-body');
+        const modalBody = modal.querySelector('.modal-body'); // modal-content değil, içindeki body
         
-        modalContent.innerHTML = `
-            <h2>${project.title[lang]}</h2>
-            <p>${project.details[lang]}</p>
+        modalBody.innerHTML = `
+            <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">${project.title[lang]}</h2>
+            <div style="margin-bottom: 1.5rem;">
+                <img src="${project.image}" alt="${project.title[lang]}" 
+                     style="width: 100%; border-radius: 8px; margin-bottom: 1rem;"
+                     onerror="this.src='https://via.placeholder.com/600x400/3498db/ffffff?text=Project+Image'">
+            </div>
+            <p style="line-height: 1.8; margin-bottom: 1.5rem;">${project.details[lang]}</p>
             <div class="modal-tech">
                 <h3>${translations[lang].technologies}</h3>
                 <div class="project-tags">
                     ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                 </div>
             </div>
-            <div class="modal-links">
+            <div class="modal-links" style="display: flex; gap: 1rem; margin-top: 2rem;">
                 ${project.liveLink !== '#' ? 
-                    `<a href="${project.liveLink}" target="_blank" class="modal-link">
-                        <i class="fas fa-external-link-alt"></i>
-                        ${translations[lang].live_demo}
+                    `<a href="${project.liveLink}" target="_blank" class="cv-button" style="text-decoration: none;">
+                        <i class="fas fa-external-link-alt"></i> ${translations[lang].live_demo}
                     </a>` : ''
                 }
                 ${project.sourceLink !== '#' ? 
-                    `<a href="${project.sourceLink}" target="_blank" class="modal-link">
-                        <i class="fab fa-github"></i>
-                        ${translations[lang].source_code}
+                    `<a href="${project.sourceLink}" target="_blank" class="cv-button" style="text-decoration: none; background-color: var(--secondary-color);">
+                        <i class="fab fa-github"></i> ${translations[lang].source_code}
                     </a>` : ''
                 }
             </div>
         `;
         
         modal.style.display = 'block';
-        document.querySelector('.close-modal').onclick = () => modal.style.display = 'none';
-        window.onclick = (e) => e.target === modal && (modal.style.display = 'none');
-        
-        // Add styling to modal links
-        document.querySelectorAll('.modal-link').forEach(link => {
-            link.style.cssText = `
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                padding: 0.8rem 1.5rem;
-                background-color: var(--primary-color);
-                color: white;
-                text-decoration: none;
-                border-radius: 5px;
-                transition: var(--transition);
-            `;
-        });
+        document.body.style.overflow = 'hidden'; // Arka plan kaymasını engelle
+
+        // Kapatma butonu kontrolü
+        const closeBtn = modal.querySelector('.close-modal');
+        closeBtn.onclick = () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        };
+
+        // Dışarı tıklayınca kapatma (Link tıklamasını bozmamak için kontrol eklendi)
+        window.onclick = (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        };
     }
 
     // Smooth Scrolling
