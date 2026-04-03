@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
             about_text1: 'I am a passionate engineering student with a double major in Electrical & Electronics Engineering and Computer Engineering at Çukurova University.',
             about_text2: 'I have a strong interest in software development, embedded systems, and IoT technologies. My goal is to combine my knowledge from both fields to create innovative solutions.',
             education_title: 'Education',
-            edu_date3: '2026- Now',
+            edu_date3: '2026 - Present',
             edu_title3: 'Çukurova University',
             edu_desc3: 'Electrical & Electronics Engineering - M.Sc. (Power Electronics)',
-            edu_date1: '2020-2025',
+            edu_date1: '2020 - 2025',
             edu_title1: 'Çukurova University',
             edu_desc1: 'Electrical & Electronics Engineering - Bachelor\'s Degree',
-            edu_date2: '2022-2025',
+            edu_date2: '2022 - 2025',
             edu_title2: 'Çukurova University',
             edu_desc2: 'Computer Engineering - Double Major Program',
             projects_title: 'Projects',
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             exp_date2: '2022-2023',
             exp_title2: 'Freelance Developer',
             exp_desc2: 'Worked on various web development and automation projects for clients',
-            download_cv: 'Download CV'
+            //download_cv: 'Download CV'
         },
         tr: {
             about: 'Hakkımda',
@@ -52,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
             about_text1: 'Çukurova Üniversitesi\'nde Elektrik-Elektronik Mühendisliği ve Bilgisayar Mühendisliği çift anadal programında öğrenciyim.',
             about_text2: 'Yazılım geliştirme, gömülü sistemler ve IoT teknolojilerine büyük ilgi duyuyorum. Amacım, her iki alandaki bilgimi birleştirerek yenilikçi çözümler üretmek.',
             education_title: 'Eğitim',
+            edu_date3: '2026 - Devam Ediyor',
+            edu_title3: 'Çukurova Üniversitesi',
+            edu_desc3: 'Elektrik-Elektronik Mühendisliği - Yüksek Lisans - Güç Elektroniği',
             edu_date1: '2020-2025',
             edu_title1: 'Çukurova Üniversitesi',
             edu_desc1: 'Elektrik-Elektronik Mühendisliği - Lisans Derecesi',
@@ -72,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             exp_date2: '2022-2023',
             exp_title2: 'Serbest Çalışan Geliştirici',
             exp_desc2: 'Çeşitli web geliştirme ve otomasyon projeleri üzerinde müşteriler için çalıştım',
-            download_cv: 'CV İndir'
+            //download_cv: 'CV İndir'
         }
     };
 
@@ -235,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 tr: 'Raspberry Pi ve çeşitli sensörler kullanarak mobil uygulama ve ses komutlarıyla kontrol edilebilen bir akıllı ev sistemi geliştirdim. Aydınlatma kontrolü, sıcaklık izleme ve güvenlik uyarıları gibi özellikler içerir. Sistem iletişim için MQTT protokolünü kullanır ve ses kontrolü için Google Assistant ile entegre olur.'
             },
             tags: ['IoT', 'Python', 'Raspberry Pi', 'MQTT', 'Home Assistant'],
-            liveLink: '#',
+            liveLink: 'https://youtu.be/aC4WuSHwFys?si=P0J63OXSqoHqJeug',
             sourceLink: '#'
         },
         {
